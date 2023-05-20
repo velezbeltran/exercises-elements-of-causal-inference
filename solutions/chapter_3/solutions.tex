@@ -1,0 +1,65 @@
+\documentclass[11pt]{article}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[english]{babel} % change 'english' to your language
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{natbib} % or \usepackage{biblatex}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{mathtools}
+\usepackage{fancyhdr}
+
+
+
+
+\title{Problem Set Solutions}
+\author{Your Name Here}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Problem 3.6}
+Take the model 
+\begin{align*}
+    C &= N_C \\
+    E &= \alpha C + N_E
+\end{align*}
+What is the distribution of $P(C | E = 2)$
+\subsection*{Solution}
+Using bayes rule we have that 
+\begin{align*}
+P(C | E = 2) &= \frac{P(E = 2 | C) P(C)}{P(E = 2)} \\
+&\propto P(E = 2 | C) P(C) \\
+&\propto \exp\left( -\frac{1}{2} (2 - \alpha C)^2 \right) \exp\left(-\frac{1}{2} C^2\right) \\
+&\propto \exp\left( -\frac{1}{2} (4 - 4 \alpha C +  (\alpha^2 + 1) C^2) \right) \\
+&\propto \exp\left( -\frac{1}{2} (- 4 \alpha C +  (\alpha^2 + 1) C^2) \right) \\
+&\propto \exp\left( -\frac{\alpha ^2 + 1}{2 } (- 4 \frac{\alpha}{\alpha^2 + 1} C +  C^2) \right) \\
+&\propto \exp\left( -\frac{\alpha ^2 + 1}{2 } \left(C -  \frac{2\alpha }{\alpha^2 + 1}\right)^2\right) \\
+\end{align*}
+Clearly, minus the normalizing constant, this is the pdf of a normal distribution with
+ mean $\mu = \frac{2\alpha }{\alpha^2 + 1}$ and variance $\sigma^2 = \frac{1}{\alpha^2 + 1}$.
+ Therefore, the distribution must be a normal with these parameters.
+ And plugging back in $\alpha = 4$ we get the result in the book. Namely 
+\[P(C | E = 2) = \mathcal{N}(\mu = 8/17, \sigma^2 = 1/17)\]
+
+\section*{Problem 3.7}
+See the book
+\subsection*{Solution}
+We can intervene on X with the distribution $P(X) = \text{Bernoulli}(0.5)$ and then we can check the distribution of $Y$.
+If it is normal then we know that the model $Y \rightarrow X$ is correct. 
+If it is not normal then we know that the model $X \rightarrow Y$ is correct.
+
+
+% Repeat for more problems
+
+\end{document}
