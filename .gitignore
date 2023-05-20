@@ -1,0 +1,77 @@
+# LaTeX specific ignores
+
+# LaTeX build files
+*.aux
+*.log
+*.toc
+*.lof
+*.lot
+*.out
+*.bbl
+*.blg
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.gz
+
+# LaTeX intermediate files
+*.dvi
+*.xdv
+*.fdb_latexmk
+*.bak
+
+# LaTeX editor specific files
+# TeXstudio
+*.txssync
+*.loa
+*.lof.bak
+*.lot.bak
+*.lol.bak
+*.aux.bak
+*.bbl.bak
+*.bcf.bak
+*.run.xml.bak
+*.synctex.gz(busy)
+*.synctex.gz([0-9]*)
+*.synctex.gz([0-9]*[a-z])
+
+# Vim
+*.swp
+*.synctex.gz
+
+# Texmaker
+*.bak
+*.backup
+
+# Other ignores
+
+# Compiled PDF files
+*.pdf
+
+# Compiled DVI files
+*.dvi
+
+# LaTeX package installation files
+*.ins
+*.sty~
+
+# LaTeX document class files
+*.cls~
+
+# BibTeX generated files
+*.bbl
+*.blg
+
+# Other generated files
+*.gz
+*.log
+*.out
+*.synctex
+*.synctex.gz
+*.synctex.gz(busy)
+*.synctex.gz(busy)*
+*.fdb_latexmk
+*.fls
+*.fdb_latexmk
+*.spl
+*.xdv
